@@ -11,6 +11,15 @@ const router = createRouter({
     },
 
     //-------
+    // Error
+    //-------
+    {
+      path: '/error/500',
+      name: '500',
+      component: () => import ('@/views/error/error500.vue')
+    },
+
+    //-------
     // Login
     //-------
     {

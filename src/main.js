@@ -3,6 +3,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './rooter'
 import store from './common/store'
+import status from './common/status'
 
 // Bootstrap Components
 import 'bootstrap/dist/css/bootstrap.css'
@@ -14,5 +15,6 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 const app = createApp(App)
 app.use(router)
 app.use(store)
+app.use(status)
 app.mount('#app')
 
