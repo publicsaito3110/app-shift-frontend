@@ -1,9 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Index from './app/Index.vue'
-import Login from './login/Login.vue'
-import Logout from './logout/Logout.vue'
-import Home from './home/Home.vue'
-import User from './user/User.vue'
 
 const router = createRouter({
   mode: 'history',
@@ -12,7 +7,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'index',
-      component: Index
+      component: () => import ('@/views/app/Index.vue')
     },
 
     //-------
@@ -21,7 +16,7 @@ const router = createRouter({
     {
       path: '/login',
       name: 'login',
-      component: Login
+      component: () => import ('@/views/login/Login.vue')
     },
 
     //-------
@@ -30,7 +25,7 @@ const router = createRouter({
     {
       path: '/logout',
       name: 'logout',
-      component: Logout
+      component: () => import ('@/views/logout/Logout.vue')
     },
 
     //-------
@@ -39,7 +34,7 @@ const router = createRouter({
     {
       path: '/home',
       name: 'home',
-      component: Home
+      component: () => import ('@/views/home/Home.vue')
     },
 
     //-------
@@ -48,7 +43,7 @@ const router = createRouter({
     {
       path: '/user',
       name: 'user',
-      component: User,
+      component: () => import ('@/views/user/User.vue'),
       props: true
     },
   ]
